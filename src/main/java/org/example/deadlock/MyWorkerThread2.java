@@ -3,8 +3,8 @@ package org.example.deadlock;
 
 
 public class MyWorkerThread2 extends Thread {
-    public static void worker2() {
-
+    @Override
+    public void run() {
         System.out.println("worker2 started");
         synchronized (TestThread.lock2) {
             System.out.println("worker2 run");
@@ -16,4 +16,9 @@ public class MyWorkerThread2 extends Thread {
         }
         System.out.println("worker2 finished");
     }
+
+
+
+
+
 }
